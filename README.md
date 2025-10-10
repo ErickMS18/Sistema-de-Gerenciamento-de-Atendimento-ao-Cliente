@@ -1,8 +1,20 @@
-# 🧠 Sistema de Gerenciamento de Atendimento ao Cliente
+## Sistema de Gerenciamento de Atendimento ao Cliente
 
-Este projeto implementa um **sistema de gerenciamento de atendimento ao cliente** utilizando **estruturas de dados dinâmicas** construídas manualmente em Java — uma **fila** para controle de atendimento e uma **pilha** para histórico de solicitações.
+Este projeto implementa um sistema de gerenciamento de atendimento ao cliente utilizando estruturas de dados dinâmicas — uma **fila** para controle de atendimento e uma **pilha** para histórico de solicitações.
 
-O foco principal é demonstrar o funcionamento lógico das estruturas de dados, **sem o uso de funções ou bibliotecas prontas**, atendendo a restrições acadêmicas que exigem manipulação direta de ponteiros e nós encadeados.
+## Instituição
+**PUCPR - Pontifícia Universidade Católica do Paraná**
+
+## Disciplina
+**Resolução de Problemas Estruturados em Computação**
+
+## Professor
+**Andrey Cabral Meira**
+
+## Alunos
+- Cecília Lucchesi Mardegan (usuário: [ceciLcchM](https://github.com/ceciLcchM))
+- Christine von Schmalz (usuário: [cvschmalz](https://github.com/cvschmalz))
+- Erick Maestri de Souza (usuário: [ErickMS18](https://github.com/ErickMS18))
 
 ---
 
@@ -36,16 +48,6 @@ O foco principal é demonstrar o funcionamento lógico das estruturas de dados, 
 
 ---
 
-## 🧠 Conceito Principal
-
-O projeto demonstra o conceito de **estruturas de dados encadeadas**, onde cada elemento (nó) conhece apenas o próximo — sem índices ou posições fixas.  
-Isso permite:
-- Crescimento e redução dinâmicos da estrutura.
-- Total controle sobre a inserção e remoção de elementos.
-- Aplicação prática dos princípios de **Pilha (LIFO)** e **Fila (FIFO)**.
-
----
-
 ## 🧰 Recursos Implementados
 
 - Inserção e remoção na **Fila** e na **Pilha**.
@@ -73,3 +75,7 @@ Apenas os seguintes recursos da linguagem foram utilizados:
 1. Compile o programa:
    ```bash
    javac SistemaAtendimento.java
+
+2. Execute o sistema:
+   ```bash
+   java SistemaAtendimento
