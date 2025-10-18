@@ -1,81 +1,62 @@
 ## Sistema de Gerenciamento de Atendimento ao Cliente
 
-Este projeto implementa um sistema de gerenciamento de atendimento ao cliente utilizando estruturas de dados dinâmicas — uma **fila** para controle de atendimento e uma **pilha** para histórico de solicitações.
+Disciplina: Resolução de Problemas de Natureza Discreta
 
-## Instituição
-**PUCPR - Pontifícia Universidade Católica do Paraná**
+Professor: Andrey Cabral Meira
 
-## Disciplina
-**Resolução de Problemas Estruturados em Computação**
+Alunos: 
 
-## Professor
-**Andrey Cabral Meira**
-
-## Alunos
 - Cecília Lucchesi Mardegan (usuário: [ceciLcchM](https://github.com/ceciLcchM))
 - Christine von Schmalz (usuário: [cvschmalz](https://github.com/cvschmalz))
 - Erick Maestri de Souza (usuário: [ErickMS18](https://github.com/ErickMS18))
 
----
+## Descrição do projeto
 
-## ⚙️ Estruturas Utilizadas
+Este projeto implementa um sistema de gerenciamento de atendimento ao cliente utilizando uma fila para controle de atendimento e uma pilha para histórico de solicitações.
 
-### 🧾 Fila de Atendimento (FIFO)
-- Controla a **ordem de chegada dos clientes**.
-- Cada cliente possui **ID, nome e motivo do atendimento**.
-- O primeiro que entra é o primeiro a ser atendido.
-- Implementada com **lista encadeada manual**, sem arrays ou coleções.
+## Estruturas
 
-### 🗃️ Pilha de Histórico (LIFO)
-- Armazena as **solicitações de serviço realizadas**.
-- Cada solicitação tem **ID, descrição, data e hora**.
-- O último item adicionado é o primeiro a ser removido.
-- Também implementada com **lista encadeada**, simulando o empilhamento real.
+### Node.java
 
----
+Um nó na pilha ou lista, que armazena um objeto do tipo `Elemento` e um ponteiro para o próximo nó.
 
-## 🧩 Lógica do Sistema
+### Elemento.java
 
-1. O programa inicia com uma **fila de clientes** aguardando atendimento e um **histórico de solicitações** já realizadas.
-2. O usuário interage por meio de um **menu textual**, podendo:
-   - Visualizar a fila atual.
-   - Atender o próximo cliente (removendo-o da fila).
-   - Visualizar o histórico de solicitações (pilha).
-   - Adicionar novas solicitações ao histórico.
-3. A **fila** segue a lógica “**primeiro que chega, primeiro que sai**”.
-4. A **pilha** segue a lógica “**último que entra, primeiro que sai**”.
-5. Todas as operações são realizadas **manualmente**, criando e encadeando nós, sem estruturas automatizadas.
+Armazena informações sobre atendimentos ou solicitações em três variáveis do tipo `String`.
 
----
+- `id` é sempre usado como um identificador;
+- `descricao` é usado para o nome do cliente, ou a descrição da solicitação;
+- `info` é usado como motivo do atentimento para clientes, ou data-hora para solicitações.
 
-## 🧰 Recursos Implementados
+### Fila
 
-- Inserção e remoção na **Fila** e na **Pilha**.
-- Verificação se estão **vazias**.
-- Impressão da **ordem de atendimento** e do **histórico**.
-- Interação completa via **menu no terminal**.
-- **Tratamento de erros** e mensagens explicativas para o usuário.
+Uma implementação de fila. Guarda ponteiros para os nós no início e fim da fila, e contém os seguintes métodos:
 
----
+- `insere`: insere um elemento no fim da fila
+- `remove`: remove um elemento no começo da fila
+- `imprime`: exibe a fila em ordem de início para fim
+- `estaVazia`: verifica se a fila está vazia
+- `popularFila`: adiciona elementos à fila, levando como parâmetro uma lista de elementos 
 
-## 📄 Regras do Projeto
+### Pilha
 
-O trabalho foi desenvolvido **sem uso de funções automatizadas**.  
-Apenas os seguintes recursos da linguagem foram utilizados:
-- Tipos primitivos (`int`, `float`, `String`)
-- Estruturas de decisão e repetição
-- Entrada de dados (`Scanner`)
-- Controle de exceções (`try-catch`)
-- Operadores e manipulação manual de ponteiros (`Node`)
+Uma implementação de pilha. Guarda apenas um ponteiro para o nó no topo da pilha, e contém os seguintes métodos:
 
----
+- `insere`: insere um elemento no topo da pilha
+- `remove`: remove um elemento do topo da pilha
+- `imprime`: exibe a pilha em ordem de cima para baixo
+- `estaVazia`: verifica se a pilha está vazia
+- `popularFila`: adiciona elementos à pilha, levando como parâmetro uma lista de elementos
 
-## 🚀 Execução
+### Main
 
-1. Compile o programa:
-   ```bash
-   javac SistemaAtendimento.java
+Contém a interface de interação com o usuário e o loop principal do programa. Primeiro a fila de atendimento e a pilha de histórico de solicitações são populadas com vetores de elementos. Então, começa o loop onde o usuário pode escolher realizar alguma ação sobre as estruturas.
 
-2. Execute o sistema:
-   ```bash
-   java SistemaAtendimento
+O usuário pode escolher:
+
+- Adicionar cliente à fila
+- Atender próximo cliente
+- Remover última solicitação
+- Exibir fila de atendimento
+- Exibir histórico de solicitações
+- Sair
