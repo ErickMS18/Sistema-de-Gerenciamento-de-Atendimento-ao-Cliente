@@ -1,6 +1,6 @@
 ## Sistema de Gerenciamento de Atendimento ao Cliente
 
-Disciplina: Resolução de Problemas de Natureza Discreta
+Disciplina: Resolução de Problemas Estruturados na Computação
 
 Professor: Andrey Cabral Meira
 
