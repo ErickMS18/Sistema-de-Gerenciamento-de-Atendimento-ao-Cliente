@@ -28,7 +28,7 @@ Armazena informações sobre atendimentos ou solicitações em três variáveis 
 - `descricao` é usado para o nome do cliente, ou a descrição da solicitação;
 - `info` é usado como motivo do atentimento para clientes, ou data-hora para solicitações.
 
-### Fila
+### Fila.java
 
 Uma implementação de fila. Guarda ponteiros para os nós no início e fim da fila, e contém os seguintes métodos:
 
@@ -38,7 +38,7 @@ Uma implementação de fila. Guarda ponteiros para os nós no início e fim da f
 - `estaVazia`: verifica se a fila está vazia
 - `popularFila`: adiciona elementos à fila, levando como parâmetro uma lista de elementos 
 
-### Pilha
+### Pilha.java
 
 Uma implementação de pilha. Guarda apenas um ponteiro para o nó no topo da pilha, e contém os seguintes métodos:
 
@@ -48,7 +48,7 @@ Uma implementação de pilha. Guarda apenas um ponteiro para o nó no topo da pi
 - `estaVazia`: verifica se a pilha está vazia
 - `popularFila`: adiciona elementos à pilha, levando como parâmetro uma lista de elementos
 
-### Main
+### Main.java
 
 Contém a interface de interação com o usuário e o loop principal do programa. Primeiro a fila de atendimento e a pilha de histórico de solicitações são populadas com vetores de elementos. Então, começa o loop onde o usuário pode escolher realizar alguma ação sobre as estruturas.
 
